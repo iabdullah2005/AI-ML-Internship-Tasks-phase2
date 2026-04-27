@@ -1,0 +1,5 @@
+
+AI is the simulation of human intelligence.
+Machine learning is a subset of AI.
+Deep learning uses neural networks.
+Python is widely used in AI development.

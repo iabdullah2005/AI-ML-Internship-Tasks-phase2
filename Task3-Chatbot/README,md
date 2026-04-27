@@ -1,0 +1,131 @@
+# Task 4: Context-Aware Chatbot using RAG (LangChain)
+
+## 🎯 Objective
+The objective of this task is to build a context-aware conversational chatbot that can retrieve relevant information from a knowledge base and generate meaningful responses using Retrieval-Augmented Generation (RAG).
+
+---
+
+## 🧠 Concept Overview
+
+This chatbot uses:
+- **Retrieval-Augmented Generation (RAG)** to fetch relevant information
+- **Vector database (FAISS)** for efficient document search
+- **Embeddings** to convert text into numerical representations
+- **LLM (Language Model)** to generate responses
+
+---
+
+## 📂 Dataset / Knowledge Base
+
+- A custom text file (`data.txt`) was used as the knowledge source
+- It contains information related to AI concepts such as:
+  - Artificial Intelligence
+  - Machine Learning
+  - Deep Learning
+  - Python usage in AI
+
+---
+
+## ⚙️ Methodology
+
+### 🔹 1. Data Loading
+- Loaded text documents using LangChain document loaders
+
+### 🔹 2. Text Splitting
+- Split large text into smaller chunks for better retrieval
+
+### 🔹 3. Embedding Generation
+- Used HuggingFace Embeddings to convert text into vectors
+
+### 🔹 4. Vector Store
+- Stored embeddings using FAISS (Facebook AI Similarity Search)
+
+### 🔹 5. Retrieval Mechanism
+- Retrieved relevant chunks based on user queries
+
+### 🔹 6. Language Model
+- Used a Hugging Face model (`distilgpt2`) for generating responses
+
+### 🔹 7. Conversational Chain
+- Implemented conversational memory to maintain chat context
+
+---
+
+## 📊 Features
+
+- Context-aware responses
+- Document-based question answering
+- Conversational memory support
+- Fast retrieval using FAISS
+
+---
+
+## 🤖 How It Works
+
+1. User inputs a question  
+2. System retrieves relevant document chunks  
+3. LLM generates a response based on retrieved context  
+4. Chat history is maintained for context continuity  
+
+---
+
+## 📁 Project Structure
+Task4_Chatbot_LangChain/
+│
+├── notebook.ipynb
+├── data.txt
+├── faiss_index/
+├── requirements.txt
+└── README.md
+
+
+---
+
+## 🛠️ Tools & Technologies
+
+- Python
+- LangChain
+- FAISS (Vector Database)
+- HuggingFace Transformers
+- Sentence Transformers
+- Google Colab
+
+---
+
+## 🚀 How to Run
+
+### 1. Install dependencies
+
+pip install -r requirements.txt
+
+
+### 2. Run the notebook
+- Open `notebook.ipynb`
+- Execute all cells
+
+### 3. Interact with chatbot
+- Enter queries in the input loop
+- Type `exit` to stop
+
+---
+
+## 📦 Output Files
+
+- `faiss_index/` → vector database  
+- `data.txt` → knowledge base  
+
+---
+
+## 💡 Notes
+
+- Project was implemented and tested using Google Colab
+- Instead of training a traditional model, this system uses embeddings + retrieval
+- The chatbot performance depends on the quality of the knowledge base
+
+---
+
+## 🧠 Conclusion
+
+This task demonstrates how modern AI systems combine retrieval mechanisms with language models to build intelligent conversational systems. The chatbot effectively answers queries using context-aware retrieval, making it scalable and practical for real-world applications.
+
+---
